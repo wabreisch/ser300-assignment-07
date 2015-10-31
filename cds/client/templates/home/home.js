@@ -3,3 +3,9 @@ Template.home.events({
     Router.go("elsewhere");
   }
 });
+
+Template.elsewhere.events({
+  "click #elsewhere-btn": function () {
+    Router.go("home");
+  }
+});
