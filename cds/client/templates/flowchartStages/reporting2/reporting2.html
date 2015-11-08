@@ -1,0 +1,24 @@
+<template name="reporting2">
+  <div class="container">
+
+    <h1>Does the patient have pain...</h1>
+    <form>
+      <input type="radio" name="pain-type" value="rest" style="margin-left: 25px;"> at rest?
+      <input type="radio" name="pain-type" value="movement" style="margin-left: 25px;"> while moving?
+      <input type="radio" name="pain-type" value="none" style="margin-left: 25px;"> not at all?
+    </form>
+    
+    <h1 class="command-text">Observe for potential indicators of pain.</h1>
+
+    <h1>Is pain reported / apparent?</h1>
+    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+      <button id="yes" class="btn btn-lg" style="width: 100%;">Yes</button>
+    </div>
+    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+      <button id="reluctant" class="btn btn-lg" style="width: 100%;">Reluctant to Complain of Pain</button>
+    </div>
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+      <button id="no" class="btn btn-lg" style="width: 100%;">No</button>
+    </div>
+  </div>
+</template>
