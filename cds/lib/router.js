@@ -3,6 +3,4 @@ Router.configure({
   layoutTemplate: 'layout'
 });
 
-Router.route('/', {name: 'home'});
-
-Router.route('/elsewhere/', {name: 'elsewhere'});
+Router.route('/communicate/', {name: 'communicate1'});
