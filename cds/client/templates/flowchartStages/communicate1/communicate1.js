@@ -5,6 +5,6 @@ Template.communicate1.events({
   },
   "click #no": function () {
     // go to [6]
-    Router.go("");
+    Router.go("observe6");
   }
 });

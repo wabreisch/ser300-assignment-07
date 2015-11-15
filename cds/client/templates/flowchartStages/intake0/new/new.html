@@ -1,0 +1,27 @@
+<template name="newPatient">
+  <h2>Enter New Patient Data</h2>
+
+  <label for="firstName">First Name: </label>
+  <input id="firstName" type="text" class="form-control">
+
+  <label for="lastName">Last Name: </label>
+  <input id="lastName" type="text" class="form-control">
+
+  <label>Gender: </label>
+  <div class="radio">
+    <label><input type="radio" name="gender" value="male">Male</label>
+  </div>
+
+  <div class="radio">
+    <label><input type="radio" name="gender" value="female">Female</label>
+  </div>
+
+  <div class="radio">
+    <label><input type="radio" name="gender" value="other">Other</label>
+  </div>
+
+  <label for="dob">Date of Birth: </label>
+  <input id="dob" type="date" class="form-control">
+
+  <button id="createNewPatient" class="btn btn-lg btn-success">Create New Patient</button>
+</template>

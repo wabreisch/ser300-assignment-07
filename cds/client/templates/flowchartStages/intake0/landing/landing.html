@@ -1,0 +1,21 @@
+<template name="landing">
+  <div style="text-align: center;">
+    <p class="lead">
+      {{#if currentUser}}
+        Welcome to the SER300 pain reporting clinical decision portal.  Please click on the appropriate button below to get started.
+      {{else}}
+        Welcome to the SER300 pain reporting clinical decision portal.  Please sign in to get started.
+      {{/if}}
+    </p>
+  </div>
+
+  {{#if currentUser}}
+    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6" style="text-align: center;">
+      <button id="existingPatient" class="btn btn-lg btn-primary">Existing Patient</button>   
+    </div>
+
+    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6" style="text-align: center;">
+      <button id="newPatient" class="btn btn-lg btn-primary">New Patient</button>
+    </div>
+  {{/if}}
+</template>
