@@ -18,7 +18,7 @@ Template.existing.helpers({
   },
   
   isLoading: function() {
-    return PackageSearch.getStatus().loading;
+    return PatientSearch.getStatus().loading;
   }
 });
 
@@ -34,8 +34,9 @@ Template.existing.events({
   "click #patient": function () {
     Session.set("firstName", this.firstName);
     Session.set("lastName", this.lastName);
+    Session.set("patientId", this._id);
     setTimeout(function () {
       Router.go("communicate1");
-    }, 3000);
+    }, 1000);
   }
 });

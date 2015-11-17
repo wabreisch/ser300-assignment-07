@@ -7,6 +7,8 @@
   </div>
 
   <button id="finish" class="btn btn-lg btn-success">Finish Pain History</button>
+
+  {{> painTable}}
 </template>
 
 <template name="painLocation">
@@ -14,14 +16,28 @@
 
     <label for="painSide">On what side of your body is your pain? </label>
     <select id="painSide" class="form-control">
-      <option value="left">Left</option>
-      <option value="right">Right</option>
+      <option value="Left">Left</option>
+      <option value="Right">Right</option>
     </select>
 
     <label for="bodyPart">What is the location of your pain? </label>
     <select id="bodyPart" class="form-control">
-      <option value="lowerLeg">Lower Leg</option>
-      <option value="upperLeg">Upper Leg</option>
+      <option value="Head">Head</option>
+      <option value="Neck">Neck</option>
+      <option value="Ear">Ear</option>
+      <option value="Nose">Nose</option>
+      <option value="Throat">Throat</option>
+      <option value="Shoulder">Shoulder</option>
+      <option value="Upper Back">Upper Back</option>
+      <option value="Lower Back">Lower Back</option>
+      <option value="Hip">Hip</option>
+      <option value="Femur">Femur</option>
+      <option value="Fibula / Tibula">Fibula / Tibula</option>
+      <option value="Radius / Ulna">Radius / Ulna</option>
+      <option value="Humerus">Humerus</option>
+      <option value="Foot">Foot</option>
+      <option value="Toes">Toes</option>
+      <option value="Ankle">Ankle</option>     
     </select>
 
     <label for="painSeverityMoving">On a scale from 0 to 10, how severe is your pain while moving? </label>
@@ -56,40 +72,74 @@
 
     <label for="painFrequency">How frequent is your pain?</label>
     <select id="painFrequency" class="form-control">
-      <option value="constant">Constant</option>
-      <option value="hourly">Hourly</option>
-      <option value="daily">Daily</option>
-      <option value="constant">Occasional</option>
-      <option value="rare">Rare</option>
+      <option value="Constant">Constant</option>
+      <option value="Hourly">Hourly</option>
+      <option value="Daily">Daily</option>
+      <option value="Constant">Occasional</option>
+      <option value="Rare">Rare</option>
     </select>
 
     <label for="worsensPain">What worsens pain?</label>
     <select id="worsensPain" class="form-control">
-      <option value="activity">Activity</option>
-      <option value="inactivity">Inactivity</option>
+      <option value="Activity">Activity</option>
+      <option value="Inactivity">Inactivity</option>
     </select>
 
     <label for="alleviatesPain">What alleviates pain?</label>
     <select id="alleviatesPain" class="form-control">
-      <option value="rest">Rest</option>
-      <option value="coldTherapy">Cold Therapy</option>
-      <option value="medication">Medication</option>
-      <option value="other">Other</option>
+      <option value="Rest">Rest</option>
+      <option value="Cold Therapy">Cold Therapy</option>
+      <option value="Medication">Medication</option>
+      <option value="Other">Other</option>
     </select>
 
-    <label for="painDescription">How would you describe your pain?</label>
-    <select id="painDescription" class="form-control">
-      <option value="dull">Dull</option>
-      <option value="sharp">Sharp</option>
-      <option value="shooting">Shooting</option>
-      <option value="ache">Ache</option>
-      <option value="burning">Burning</option>
-      <option value="stinging">Stinging</option>
-      <option value="stabbing">Stabbing</option>
-      <option value="pounding">Pounding</option>
+    <label for="painType">How would you describe your pain?</label>
+    <select id="painType" class="form-control">
+      <option value="Dull">Dull</option>
+      <option value="Sharp">Sharp</option>
+      <option value="Shooting">Shooting</option>
+      <option value="Ache">Ache</option>
+      <option value="Burning">Burning</option>
+      <option value="Stinging">Stinging</option>
+      <option value="Stabbing">Stabbing</option>
+      <option value="Pounding">Pounding</option>
     </select>
 
-    <button id="savePainDesc" class="btn btn-lg btn-danger" style="margin-top: 20px;">Save Pain Description</button>
+    <button id="savePainDesc" class="btn btn-lg btn-primary" style="margin-top: 20px;">Save Pain Description</button>
 
+    <button id="cancelPainDesc" class="btn btn-lg btn-warning" style="margin-top: 20px;">Cancel</button>
   </div>
+</template>
+
+
+<template name="painTable">
+  <table class="table table-bordered table-hover" style="margin-top: 30px;">
+    <thead>
+      <th>Pain Location</th>
+      <th>Pain Severity (Moving)</th>
+      <th>Pain Severity (At Rest)</th>
+      <th>Pain Frequency</th>
+      <th>What Worsens Pain?</th>
+      <th>What Alleviates Pain?</th>
+      <th>Type of Pain</th>
+    </thead>
+
+    <tbody>
+      {{#each getPainItems}}
+        {{> painRow}}
+      {{/each}}
+    </tbody>
+  </table>
+</template>
+
+<template name="painRow">
+  <tr>
+    <td>{{side}} {{bodyPart}}</td>
+    <td>{{painSeverityMoving}}</td>
+    <td>{{painSeverityRest}}</td>
+    <td>{{painFrequency}}</td>
+    <td>{{worsensPain}}</td>
+    <td>{{alleviatesPain}}</td>
+    <td>{{painType}}</td>
+  </tr>
 </template>

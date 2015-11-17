@@ -15,7 +15,12 @@ Router.route('/reporting/', {name: 'reporting2'});
 
 Router.route('/assess/', {name: 'assess3'});
 
-Router.route('/detailedPain/', {name: 'detailedPain'});
+Router.route('/detailedpain/', {
+  name: 'detailedPain',
+  waitOn: function () {
+    Meteor.subscribe('painInformation');
+  }
+});
 
 Router.route('/monitor/', {name: 'monitor4'});
 

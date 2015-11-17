@@ -1,5 +1,10 @@
 Template.newPatient.events({
   "click #createNewPatient": function (event) {
+
+    if ($('#firstName').val() === "" || $('#lastName').val() === "") {
+      return alert("Please fill out all form fields.");
+    }
+
     var patientInfo = {
       firstName: $('#firstName').val(),
       lastName: $('#lastName').val(),
@@ -14,7 +19,9 @@ Template.newPatient.events({
 
     Meteor.call('insertNewPatient', patientInfo, function (error, result) {
       if (error) { alert(error.reason); }
+      Session.set("patientId", result);
     });
+
 
     // reset input fields to blank
     $('#firstName').val("");
@@ -24,6 +31,6 @@ Template.newPatient.events({
 
     setTimeout(function () {
       Router.go("communicate1");
-    }, 3000);
+    }, 1000);
   }
 });

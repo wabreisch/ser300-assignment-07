@@ -4,5 +4,8 @@ Template.currentPatient.helpers({
   },
   lastName: function () {
     return Session.get("lastName");
+  },
+  id: function () {
+    return Session.get("patientId");
   }
 })

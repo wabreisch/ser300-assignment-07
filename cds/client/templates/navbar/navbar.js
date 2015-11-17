@@ -10,3 +10,11 @@ Template.navbar.helpers({
     return active && 'active';
   }
 });
+
+Template.navbar.events({
+  "click #landingNav": function () {
+    Session.set("patientId", null);
+    Session.set("firstName", null);
+    Session.set("lastName", null);
+  }
+});

@@ -4,6 +4,6 @@ Template.monitor4.events({
     Session.set("lastName", null);
     setTimeout(function () {
       Router.go("landing");
-    }, 3000);
+    }, 1000);
   }
 });

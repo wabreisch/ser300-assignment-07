@@ -1,5 +1,5 @@
 body {
-  font-family: "SFNS Display", sans-serif;
+  font-family: "Avenir", "SFNS Display", sans-serif;
 }
 
 h1 {
@@ -11,6 +11,10 @@ th {
   border-style: solid;
   border-width: 1px;
   border-color: #D5D5D5;
+}
+
+td {
+  word-wrap: break-word;
 }
 
 .jumbotron.error { /* Used for 404 error page */
@@ -26,8 +30,13 @@ th {
 
 .command-text {
   color: red;
+  font-size: 3.5vw;
 }
 
 input.form-control {
   margin-bottom: 20px;
+}
+
+#currPatient {
+  color: #FF8000;
 }

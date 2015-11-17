@@ -12,7 +12,7 @@
   
     <div class="collapse navbar-collapse pain-navbar">
       <ul class="nav navbar-nav">
-        <li class="{{activeClass 'landing'}}"><a href="{{pathFor 'landing'}}">Homepage</a></li>
+        <li id="landingNav" class="{{activeClass 'landing'}}"><a href="{{pathFor 'landing'}}">Landing Page</a></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <li class="dropdown">
@@ -27,7 +27,4 @@
       </ul>
     </div>
   </nav>
-  <div class="pull-right">
-    {{> currentPatient}}
-  </div>
 </template>
