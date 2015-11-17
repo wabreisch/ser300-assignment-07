@@ -4,7 +4,7 @@ Template.observe6.events({
     Router.go("morbidity7");
   },
   "click #no": function () {
-    // go to [10], which is the same as [4]
+    // go to [10], which is the same state as [4]
     Router.go("monitor4");
   },
 })

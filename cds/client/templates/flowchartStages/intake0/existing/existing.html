@@ -1,11 +1,25 @@
 <template name="existing">
   <h2>Search for Existing Patient</h2>
 
-  <label for="firstName">First Name: </label>
-  <input id="firstName" type="text" class="form-control">
+  <label for="name">Search by Name: </label>
+  <input id="name" type="text" class="form-control">
 
-  <label for="lastName">Last Name: </label>
-  <input id="lastName" type="text" class="form-control">
+  <table class="table table-bordered table-hover">
+      <thead>
+        <th>Name</th>
+        <th>Select</th>
+      </thead>
+      <tbody>
+        {{#each getPatients}}
+          {{> patient}}
+        {{/each}}
+      </tbody>
+  </table>
+</template>
 
-  <button id="searchBtn" class="btn btn-lg btn-success">Search For Patient</button>
+<template name="patient">
+  <tr>
+    <td>{{firstName}} {{lastName}}</td>
+    <td><button id="patient" class="btn btn-primary">Select</button></td>
+  </tr>
 </template>

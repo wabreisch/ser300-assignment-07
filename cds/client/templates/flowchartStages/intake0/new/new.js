@@ -8,12 +8,22 @@ Template.newPatient.events({
     };
 
     sAlert.success("Successfully signed in a new patient.", {position: "bottom"});
-    console.log(patientInfo);
+
+    Session.set("firstName", patientInfo.firstName);
+    Session.set("lastName", patientInfo.lastName);
+
+    Meteor.call('insertNewPatient', patientInfo, function (error, result) {
+      if (error) { alert(error.reason); }
+    });
 
     // reset input fields to blank
     $('#firstName').val("");
     $('#lastName').val("");
     $('#dob').val("");
     $('input[name="gender"]').prop('checked', false);
+
+    setTimeout(function () {
+      Router.go("communicate1");
+    }, 3000);
   }
 });

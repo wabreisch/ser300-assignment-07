@@ -1,29 +1,20 @@
 <template name="reporting2">
   <div class="container">
+    <div style="text-align: center;">
 
     <h2>Does the patient have pain...</h2>
-
-    <div class="radio">
-      <label><input type="radio" name="pain-type" value="rest">at rest?</label>
-    </div>
-    <div class="radio">
-      <label><input type="radio" name="pain-type" value="movement">while moving?</label>
-    </div>
-    <div class="radio">
-      <label><input type="radio" name="pain-type" value="none">not at all?</label>
-    </div> 
     
-    <h2 class="command-text">** Observe for potential indicators of pain. **</h2>
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" style="margin-bottom: 20px;">
+      <button id="rest" class="btn btn-lg btn-primary" style="width: 33%;">at rest?</button>
+    </div>
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" style="margin-bottom: 20px;">
+      <button id="moving" class="btn btn-lg btn-primary" style="width: 33%;">while moving?</button>
+    </div>
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" style="margin-bottom: 20px;">
+      <button id="no" class="btn btn-lg btn-primary" style="width: 33%;">not at all?</button>
+    </div>
 
-    <h2>Is pain reported / apparent?</h2>
-    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" style="margin-bottom: 20px;">
-      <button id="yes" class="btn btn-lg btn-primary" style="width: 100%;">Yes</button>
-    </div>
-    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" style="margin-bottom: 20px;">
-      <button id="reluctant" class="btn btn-lg btn-primary" style="width: 100%;">Reluctant to Complain of Pain</button>
-    </div>
-    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-      <button id="no" class="btn btn-lg btn-primary" style="width: 100%;">No</button>
+    <h2 class="command-text">** Also observe for potential indicators of pain. **</h2>
     </div>
   </div>
 </template>

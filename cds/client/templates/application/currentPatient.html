@@ -1,0 +1,9 @@
+<template name="currentPatient">
+  <div style="margin-right: 20px; text-align: right;">
+    {{#if firstName}}
+      <b>Current Patient: </b> {{firstName}} {{lastName}}
+    {{else}}
+      <b>Current Patient: </b> N/A
+    {{/if}}
+  </div>
+</template>

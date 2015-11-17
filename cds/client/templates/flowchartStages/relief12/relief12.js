@@ -1,4 +1,4 @@
-Template.monitor4.events({
+Template.relief12.events({
   "click #finish": function () {
     Session.set("firstName", null);
     Session.set("lastName", null);

@@ -1,9 +1,9 @@
 Template.reporting2.events({
-  "click #yes": function () {
+  "click #rest": function () {
     // go to [3]
     Router.go("assess3");
   },
-  "click #reluctant": function () {
+  "click #moving": function () {
     // go to [3]
     Router.go("assess3");
   },
