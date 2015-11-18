@@ -1,3 +1,5 @@
+// simple event handlers for the morbidity page
+
 Template.morbidity7.events({
   "click #yes": function () {
     // go to [8]

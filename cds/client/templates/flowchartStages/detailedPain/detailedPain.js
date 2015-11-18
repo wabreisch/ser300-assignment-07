@@ -2,6 +2,8 @@ Template.detailedPain.events({
   "click #newLocation": function () {
     // insert new instance of pain location template
     Blaze.render(Template.painLocation, $("#newPainLocation").get(0));
+    
+    // disable buttons so the user cannot create multiple instances of the new pain location template
     $("#newLocation").prop("disabled", true);
     $("#finish").prop("disabled", true);
   },
@@ -22,13 +24,16 @@ Template.detailedPain.events({
     // insert the var painDescription into the DB
     Meteor.call('insertPainInfo', painDescription);
 
+    // remove the div containing the insert pain item template
     $("#painLocationDiv").remove();    
 
+    // re-enable previously disabled buttons
     $("#newLocation").prop("disabled", false);
     $("#finish").prop("disabled", false);
   },
 
-  "click #cancelPainDesc" : function () {
+  "click #cancelPainDesc" : function () { 
+    // ensure the user doesn't accidentally click the "cancel" button
     if (confirm("Are you sure you wish to cancel?  Your changes will be lost.")) {
       $("#painLocationDiv").remove();    
       $("#newLocation").prop("disabled", false);
@@ -37,7 +42,7 @@ Template.detailedPain.events({
   },
 
   "click #finish": function () {
-    // save any unsaved changes
+    // navigate to the next page in the flowchart
     setTimeout(function () {
       Router.go("info5");
     }, 1000);
@@ -45,7 +50,7 @@ Template.detailedPain.events({
 });
 
 Template.painTable.helpers({
-  getPainItems: function () {
+  getPainItems: function () { // return all pain information documents that match the current patient's ID
     return PainInformation.find({patientId: Session.get("patientId")});
   }
 });

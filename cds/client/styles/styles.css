@@ -1,12 +1,13 @@
 body {
+  /* Set the app's font stack */
   font-family: "Avenir", "SFNS Display", sans-serif;
 }
 
-h1 {
+h1 { /* Add spacing below all h1 elements */
   margin-bottom: 25px;
 }
 
-th {
+th { 
   padding: 5px;
   border-style: solid;
   border-width: 1px;
@@ -25,15 +26,13 @@ td {
   font-size: 60px;
 }
 
-.dropdown-menu {
-}
 
-.command-text {
+.command-text { /* Set the color and size of all elements with command-text class */
   color: red;
   font-size: 3.5vw;
 }
 
-input.form-control {
+input.form-control { /* Add some spacing below form-control input elements */
   margin-bottom: 20px;
 }
 

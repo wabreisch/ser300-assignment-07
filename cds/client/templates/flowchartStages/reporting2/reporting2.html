@@ -1,3 +1,6 @@
+<!-- A template for asking the patient under what circumstances
+the patient experiences pain -->
+
 <template name="reporting2">
   <div class="container">
     <div style="text-align: center;">
@@ -5,13 +8,16 @@
     <h2>Does the patient have pain...</h2>
     
     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" style="margin-bottom: 20px;">
-      <button id="rest" class="btn btn-lg btn-primary" style="width: 33%;">at rest?</button>
+      <button id="rest" class="btn btn-lg btn-primary" style="min-width: 50%;">at rest?</button>
     </div>
     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" style="margin-bottom: 20px;">
-      <button id="moving" class="btn btn-lg btn-primary" style="width: 33%;">while moving?</button>
+      <button id="moving" class="btn btn-lg btn-primary" style="min-width: 50%;">while moving?</button>
     </div>
     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" style="margin-bottom: 20px;">
-      <button id="no" class="btn btn-lg btn-primary" style="width: 33%;">not at all?</button>
+      <button id="both" class="btn btn-lg btn-primary" style="min-width: 50%;">both at rest and moving?</button>
+    </div>
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" style="margin-bottom: 20px;">
+      <button id="no" class="btn btn-lg btn-primary" style="min-width: 50%;">not at all?</button>
     </div>
 
     <h2 class="command-text">⦿ Also observe for potential indicators of pain. </h2>

@@ -4,6 +4,10 @@ Template.reporting2.events({
     Router.go("assess3");
   },
   "click #moving": function () {
+    // go to [3], the same as a "yes" in this case
+    Router.go("assess3");
+  },
+  "click #both": function () {
     // go to [3]
     Router.go("assess3");
   },

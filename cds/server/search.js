@@ -1,5 +1,6 @@
+// implements an updating search feature using the meteorhacks:search-source package
+
 SearchSource.defineSource('patients', function(searchText, options) {
-  // var options = {sort: {isoScore: -1}, limit: 20};
   var options = {limit: 20};
   
   if (searchText) {

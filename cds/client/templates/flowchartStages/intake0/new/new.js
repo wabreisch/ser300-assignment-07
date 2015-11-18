@@ -1,11 +1,12 @@
 Template.newPatient.events({
   "click #createNewPatient": function (event) {
 
+    // ensure the user has at least entered a first/last name for the patient
     if ($('#firstName').val() === "" || $('#lastName').val() === "") {
       return alert("Please fill out all form fields.");
     }
 
-    var patientInfo = {
+    var patientInfo = { // grab all patient data from the form using jQuery
       firstName: $('#firstName').val(),
       lastName: $('#lastName').val(),
       gender: $('input[name=gender]:checked').val(), 
@@ -19,7 +20,7 @@ Template.newPatient.events({
 
     Meteor.call('insertNewPatient', patientInfo, function (error, result) {
       if (error) { alert(error.reason); }
-      Session.set("patientId", result);
+      Session.set("patientId", result); // after inserting the patient, set the session variable patientId appropriately
     });
 
 

@@ -1,4 +1,4 @@
-Template.currentPatient.helpers({
+Template.currentPatient.helpers({ // helpers to return data to the currentPatient template
   firstName: function () {
     return Session.get("firstName");
   },

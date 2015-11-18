@@ -12,7 +12,7 @@ Template.navbar.helpers({
 });
 
 Template.navbar.events({
-  "click #landingNav": function () {
+  "click #landingNav": function () { // if the user clicks the "landing" navbar element, reset the patient session variables to null
     Session.set("patientId", null);
     Session.set("firstName", null);
     Session.set("lastName", null);

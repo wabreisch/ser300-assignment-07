@@ -1,4 +1,4 @@
-Template.communicate1.events({
+Template.communicate1.events({ // handle click events on the communicate1 template
   "click #yes": function () {
     // go to [2]
     Router.go("reporting2");
